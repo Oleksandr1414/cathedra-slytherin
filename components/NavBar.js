@@ -57,7 +57,7 @@ export default function NavBar() {
           <Link href="/">Новини</Link>
           <Link href="/vstyp">Вступникам</Link>
           <Link href="/learning">Перелік предметів</Link>
-          <Link href="/teachers">Викладачі</Link>
+          <Link href="/professors">Викладачі</Link>
           <Link href="/contacts">Контакти</Link>
         </>
       ),

@@ -58,7 +58,9 @@ export default function post() {
           </Grid.Container>
         </Card.Header>
         <Card.Body css={{ py: "$2" }}>
-          <Text size={25}>{post?.content}</Text>
+          <Text css={{ textAlign: "justify", lineHeight: "150%" }} size={25}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{post?.content}
+          </Text>
         </Card.Body>
       </Card>
     );
@@ -66,7 +68,7 @@ export default function post() {
 
   return (
     <Page title={`Пост ${1}`}>
-      <Container sm css={{ pt: "5vh" }}>
+      <Container sm css={{ pt: "5vh", pb: "5vh" }}>
         <Row>
           <Link href={"/"}>&#10162; На головну</Link>
         </Row>

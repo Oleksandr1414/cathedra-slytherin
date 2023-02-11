@@ -29,7 +29,12 @@ export default function Posts() {
               />
               <Grid.Container css={{ pl: "$6" }}>
                 <Grid xs={12}>
-                  <Text size={28} h4 css={{ lineHeight: "$xs" }}>
+                  <Text
+                    size={28}
+                    css={{
+                      lineHeight: "$xs",
+                    }}
+                  >
                     {card.title}
                   </Text>
                 </Grid>
@@ -41,7 +46,16 @@ export default function Posts() {
               </Grid.Container>
             </Card.Header>
             <Card.Body css={{ py: "$2" }}>
-              <Text size={25}>{card.content}</Text>
+              <Text
+                size={25}
+                css={{
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                {card.content}
+              </Text>
             </Card.Body>
             <Card.Footer>
               <Link style={{ color: "#0B7439" }} href={`/posts/${card.id}`}>
