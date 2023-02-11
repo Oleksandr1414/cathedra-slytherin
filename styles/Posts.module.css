@@ -1,0 +1,43 @@
+.main_container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: darken;
+  background-color: #00000099 !important;
+  background: url(https://abrakadabra.fun/uploads/posts/2022-03/1647652375_1-abrakadabra-fun-p-oboi-garri-potter-na-telefon-slizerin-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+}
+.main_container p {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.main_container_text {
+  color: #fff;
+  font-size: 12rem;
+  font-weight: 500;
+  line-height: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+  .main_container p {
+    font-size: 1.5rem;
+  }
+  .main_container_text {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main_container p {
+    font-size: 0.75rem;
+  }
+  .main_container_text {
+    font-size: 4rem;
+  }
+}

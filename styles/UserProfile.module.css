@@ -1,0 +1,44 @@
+.user_profile {
+  padding: 8px 24px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: nowrap;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+  transition: 0.3s background-color;
+}
+.user_profile:hover {
+  cursor: pointer;
+
+  background-color: rgb(223, 223, 223);
+}
+
+.user_icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: #17c96470;
+}
+
+.user_name {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.user_name > p {
+  font-size: 0.8em;
+}
+.email_text {
+  font-size: 0.75em;
+}
