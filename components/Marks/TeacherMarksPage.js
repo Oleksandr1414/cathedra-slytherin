@@ -209,7 +209,7 @@ export default function TeacherMarksPage({ user }) {
   return (
     <Container css={{ pt: "5vh" }} lg>
       <Row css={{ pb: "30px" }}>
-        <Grid.Container fluid>
+        <Grid.Container>
           <Grid md={2} alignItems="center">
             <Text color="success" css={{ fontSize: "1.2em", fontWeight: 500 }}>
               {teacher?.subject}
@@ -220,7 +220,7 @@ export default function TeacherMarksPage({ user }) {
       <hr />
       <Row css={{ pt: "2vh", pb: "2vh" }}>
         <form style={{ width: "100%" }} onSubmit={handleSubmit} id="add_mark">
-          <Grid.Container gap={1} fluid>
+          <Grid.Container gap={1}>
             <Grid xs={12} sm={2} alignItems="center">
               <Text css={{ pr: "20px" }}>Курс</Text>
               <Dropdown>
@@ -302,9 +302,7 @@ export default function TeacherMarksPage({ user }) {
       </Row>
       <hr />
       <Row css={{ pt: "2vh" }}>
-        <Grid.Container gap={2} fluid>
-          {tables}
-        </Grid.Container>
+        <Grid.Container gap={2}>{tables}</Grid.Container>
       </Row>
     </Container>
   );

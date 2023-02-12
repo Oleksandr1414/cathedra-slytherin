@@ -32,7 +32,10 @@ export default function controlshedules() {
     for (const subjectName in shedules) {
       const subject = shedules[subjectName];
       const date = () => {
-        const d = subject.date.slice(0, 10).split("-");
+        if (!subject.date) {
+          return null;
+        }
+        const d = subject.date?.slice(0, 10).split("-");
         return d[2] + "." + d[1] + "." + d[0];
       };
 

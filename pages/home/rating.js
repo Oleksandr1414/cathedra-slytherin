@@ -110,8 +110,10 @@ export default function marks() {
                 name: el.name + " " + el.surname,
                 course: getCourse(el.date),
                 avg:
-                  marks[el.login]?.reduce((a, b) => a + b) /
-                    marks[el.login]?.length || 0,
+                  (
+                    marks[el.login]?.reduce((a, b) => a + b) /
+                    marks[el.login]?.length
+                  )?.toFixed(2) || 0,
               };
             });
             setStudents(obj);

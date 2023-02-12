@@ -65,7 +65,12 @@ export default function NavBar() {
   );
 
   return (
-    <Navbar height={80} variant="sticky" maxWidth={"fluid"}>
+    <Navbar
+      height={80}
+      variant="sticky"
+      maxWidth={"fluid"}
+      css={{ zIndex: 11111 }}
+    >
       <Navbar.Toggle showIn="md" />
       <Navbar.Brand>
         <Image

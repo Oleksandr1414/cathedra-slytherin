@@ -24,6 +24,7 @@ export default function CreateAccount() {
   const [email, setEmail] = React.useState(null);
   const [subject, setSubject] = React.useState(null);
   const [subjects, setSubjects] = React.useState(null);
+  const [description, setDescription] = React.useState(null);
 
   React.useEffect(() => {
     axios({
@@ -45,16 +46,16 @@ export default function CreateAccount() {
     role: role?.currentKey || "student",
     date: null,
     subject: subject?.currentKey,
-    description: null,
+    description,
   };
 
   const userEmail = React.useMemo(() => {
     if (role.currentKey === "professor") {
       return;
     }
-    const uemail = `${name?.slice(0, 1) || "em"}${surname || "ai"}${
-      login?.slice(-3) || "l"
-    }@slytherin.com`;
+    const uemail = `${name?.trim()?.slice(0, 1) || "em"}${
+      surname?.trim() || "ai"
+    }${login?.slice(-3) || "l"}@slytherin.com`;
     setEmail(uemail);
   }, [name, surname, login]);
 
@@ -66,6 +67,16 @@ export default function CreateAccount() {
     event.preventDefault();
 
     console.log(userParams);
+    if (!userParams.subject) {
+      alert("Select subject");
+      return;
+    }
+
+    if (!userParams.description) {
+      alert("Write discription");
+      return;
+    }
+
     let response = null;
     try {
       if (userParams.role === "professor") {
@@ -146,7 +157,7 @@ export default function CreateAccount() {
                     color={inputColor}
                     label="Логін"
                     placeholder="Введіть логін..."
-                    onChange={(e) => setLogin(e.target.value)}
+                    onChange={(e) => setLogin(e.target.value.trim())}
                     autoComplete="off"
                     required
                   />
@@ -162,7 +173,7 @@ export default function CreateAccount() {
                     color={inputColor}
                     label="Пароль"
                     placeholder="Введіть пароль..."
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value.trim())}
                     autoComplete="off"
                     required
                   />
@@ -176,7 +187,7 @@ export default function CreateAccount() {
                     color={inputColor}
                     label="Ім'я"
                     placeholder="Введіть ім'я..."
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setName(e.target.value.trim())}
                     autoComplete="off"
                     required
                   />
@@ -255,9 +266,7 @@ export default function CreateAccount() {
                       label="Коментар"
                       placeholder="Опис викладача..."
                       autoComplete="off"
-                      onChange={(e) =>
-                        (userParams["description"] = e.target.value)
-                      }
+                      onChange={(e) => setDescription(e.target.value)}
                     />
                   ) : null}
                 </Grid>

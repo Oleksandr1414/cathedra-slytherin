@@ -69,7 +69,7 @@ export default function account() {
                 <Text size={40} css={{ textAlign: "center", pb: "3vh" }}>
                   Профіль
                 </Text>
-                <Grid.Container fluid gap={1}>
+                <Grid.Container gap={1}>
                   <Grid xs={12} sm={4} justify="center" alignItems="center">
                     <Avatar
                       bordered
@@ -147,6 +147,7 @@ export default function account() {
                             <Input
                               bordered
                               fullWidth
+                              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                               color="success"
                               size="lg"
                               onChange={(e) => setNewPassword(e.target.value)}

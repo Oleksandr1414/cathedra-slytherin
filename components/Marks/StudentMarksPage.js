@@ -52,7 +52,7 @@ export default function StudentMarksPage({ user }) {
   }, [user]);
 
   React.useEffect(() => {
-    if (!data) {
+    if (!data || !subjects) {
       return;
     }
 
@@ -67,10 +67,10 @@ export default function StudentMarksPage({ user }) {
     });
 
     setRows(arr.sort((a, b) => (a.course > b.course ? 1 : -1)));
-  }, [data]);
+  }, [data, subjects]);
 
   return (
-    <Container css={{ pt: "5vh" }} lg>
+    <Container css={{ pt: "5vh", pb: "5vh" }} lg>
       <Row css>
         <Col>
           <Text css={{ pb: "2vh", textAlign: "center" }}>

@@ -40,3 +40,15 @@ a:hover {
   max-width: 1400px !important;
   background: none !important;
 }
+
+.contacts_block {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  background: url(https://wallpaperaccess.com/full/981446.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}

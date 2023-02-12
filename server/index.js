@@ -57,11 +57,19 @@ app.post("/login", (req, res, next) => {
 });
 
 app.post("/createstudent", async (req, res) => {
-  await accountController.create_student(req, res);
+  try {
+    await accountController.create_student(req, res);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.post("/createprofessor", async (req, res) => {
-  await accountController.create_professor(req, res);
+  try {
+    await accountController.create_professor(req, res);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.post("/changepassword", async (req, res) => {

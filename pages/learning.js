@@ -20,7 +20,8 @@ export default function learning() {
     }
     const list = [];
 
-    subjects.forEach((subject) => {
+    const data = subjects.sort((a, b) => (a.course > b.course ? 1 : -1));
+    data.forEach((subject) => {
       list.push(
         <Grid key={subject.id} xs={12}>
           <Card css={{ w: "100%", pb: "3vh" }}>
@@ -107,9 +108,7 @@ export default function learning() {
       method: "get",
       url: "http://localhost:3001/subjects",
     })
-      .then((res) => {
-        setSubjects(res.data);
-      })
+      .then((res) => setSubjects(res.data))
       .catch((err) => console.log(err));
   }, []);
 
