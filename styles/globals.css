@@ -41,6 +41,14 @@ a:hover {
   background: none !important;
 }
 
+.nextui-collapse-title {
+  font-size: 1.15em;
+  font-weight: 500;
+}
+.nextui-collapse-subtitle {
+  padding-top: 15px;
+}
+
 .contacts_block {
   width: 100%;
   height: calc(100vh - 80px);
