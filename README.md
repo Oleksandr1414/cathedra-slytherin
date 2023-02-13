@@ -1,35 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Faculty of slytherin
 
-## Getting Started
+Libraries and framework that were taken as a basis: `Next.js + Node.js`.
+A database was selected for data storage and processing: `MySQL`.
 
-First, run the development server:
+## How to use/setting
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`npm run build` - when you change something in code you must do this commad to begin. 
+`npm run server` - to start server side, you must set your preset of DataBase information like in the file `.env.example` and set your secret key for authentification, then run this command.
+ `npm run start` - to start client side of project.
+  
+So, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about used technologies, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [NextAuth Documentation](https://next-auth.js.org/getting-started/introduction) - NextAuth for authorization.
+- [NextUi Documentation](https://nextui.org/docs/guide/getting-started) - NextUI for UI/UX.
+- [NextUi Documentation](https://nextui.org/docs/guide/getting-started) - NextAuth for authorization.
+- [express](https://expressjs.com/ru/guide/routing.html) - express for routing, client and server interaction.
+- [axios](https://axios-http.com/ru/docs/intro) - data exchange between the server and the client.
+- [passport-authentiq](https://www.passportjs.org/packages/passport-authentiq/) - for better authentification.
+- [bcrypt](https://www.npmjs.com/package/bcrypt)) - hash password for more confidence.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
