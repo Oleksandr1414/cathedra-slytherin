@@ -6,7 +6,9 @@ A database was selected for data storage and processing: `MySQL`.
 ## How to use/setting
 
 `npm run build` - when you change something in code you must do this commad to begin. 
+
 `npm run server` - to start server side, you must set your preset of DataBase information like in the file `.env.example` and set your secret key for authentification, then run this command.
+
  `npm run start` - to start client side of project.
   
 So, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
