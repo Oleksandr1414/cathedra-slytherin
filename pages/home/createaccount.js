@@ -11,9 +11,11 @@ import {
   Image,
   Textarea,
 } from "@nextui-org/react";
+import { useRouter } from "next/router";
 
 export default function CreateAccount() {
   const { data: session } = useSession();
+  const router = useRouter();
 
   const inputColor = "success";
   const [role, setRole] = React.useState("student");
@@ -25,6 +27,13 @@ export default function CreateAccount() {
   const [subject, setSubject] = React.useState(null);
   const [subjects, setSubjects] = React.useState(null);
   const [description, setDescription] = React.useState(null);
+
+  React.useEffect(() => {
+    if (session && session?.user?.role === "student") {
+      router.push("/home");
+      return;
+    }
+  }, [session]);
 
   React.useEffect(() => {
     axios({
