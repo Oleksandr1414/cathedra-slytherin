@@ -24,7 +24,7 @@ To learn more about used technologies, take a look at the following resources:
 - [express](https://expressjs.com/ru/guide/routing.html) - express for routing, client and server interaction.
 - [axios](https://axios-http.com/ru/docs/intro) - data exchange between the server and the client.
 - [passport-authentiq](https://www.passportjs.org/packages/passport-authentiq/) - for better authentification.
-- [bcrypt](https://www.npmjs.com/package/bcrypt)) - hash password for more confidence.
+- [bcrypt](https://www.npmjs.com/package/bcrypt) - hash password for more confidence.
 
 
 ## Deploy on Vercel
