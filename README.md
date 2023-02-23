@@ -20,7 +20,7 @@ To learn more about used technologies, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [NextAuth Documentation](https://next-auth.js.org/getting-started/introduction) - NextAuth for authorization.
 - [NextUi Documentation](https://nextui.org/docs/guide/getting-started) - NextUI for UI/UX.
-- [NextUi Documentation](https://nextui.org/docs/guide/getting-started) - NextAuth for authorization.
+- [NextUAuth Documentation](https://next-auth.js.org/getting-started/introduction) - NextAuth for authorization.
 - [express](https://expressjs.com/ru/guide/routing.html) - express for routing, client and server interaction.
 - [axios](https://axios-http.com/ru/docs/intro) - data exchange between the server and the client.
 - [passport-authentiq](https://www.passportjs.org/packages/passport-authentiq/) - for better authentification.
